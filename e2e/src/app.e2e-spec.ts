@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to quotation!');
+    expect(page.getTitleText()).toEqual('Welcome your crypto portfolio!');
   });
 });

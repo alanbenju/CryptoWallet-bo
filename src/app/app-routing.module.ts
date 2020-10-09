@@ -1,12 +1,14 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent }       from './users/users.component'
-import { QuotationComponent }       from './quotation/quotation.component'
+import { DashboardComponent }       from './dashboard/dashboard.component'
+import { OrdersComponent } from './orders/orders.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'users',component: UsersComponent},
-  { path: 'quotations',component: QuotationComponent}
+  { path: 'dashboard',component: DashboardComponent},
+  { path: 'orders',component: OrdersComponent}
 
 ];
 

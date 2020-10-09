@@ -4,4 +4,5 @@ export class User {
     apellido:string
     password:string
     email:string
+    balance: number
 }

@@ -7,7 +7,8 @@ import { FormsModule }  from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
-import { QuotationComponent } from './quotation/quotation.component';
+import { OrdersComponent } from './orders/orders.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppConfigService } from './services/app-config.service';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 
@@ -23,7 +24,8 @@ const appInitializerFn = (appConfig: AppConfigService) => {
   declarations: [
     AppComponent,
     UsersComponent,
-    QuotationComponent,
+    DashboardComponent,
+    OrdersComponent,
     TimeAgoPipe
   ],
   imports: [

@@ -25,9 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
- 
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -133,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "quotation"
+  "defaultProject": "quotation",
+  "cli": {
+    "analytics": "a4c3ddb9-62d3-4c16-9bc8-11f93224a696"
+  }
 }

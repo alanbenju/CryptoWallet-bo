@@ -1,0 +1,72 @@
+<br>
+<br>
+<br>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-3 container">
+      <h1>Create new order</h1>
+      <form>
+        <div class="form-group">
+          <label for="symbol">Symbol</label>
+          <select class="form-control" id="symbol" [(ngModel)]="newOrder.symbol" name="symbol">
+            <option *ngFor="let crypto of cryptos">{{crypto.symbol}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="lastname">Price</label>
+          <input type="number" class="form-control" placeholder="Enter price bought" [(ngModel)]="newOrder.price"
+            name="lastnameInput">
+        </div>
+        <div class="form-group">
+          <label for="number">Quantity</label>
+          <input type="number" class="form-control" placeholder="Enter qt" [(ngModel)]="newOrder.quantity"
+            name="emailInput">
+        </div>
+        <div class="form-group">
+          <label for="symbol">Type</label>
+          <select class="form-control" id="symbol" [(ngModel)]="newOrder.type" name="symbol">
+            <option>BUY</option>
+            <option>SELL</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pass">Date</label>
+          <input type="datetime-local" class="form-control" id="pass" [(ngModel)]="newOrder.date" name="passInput">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" (click)=create()>Create</button>
+      </form>
+    </div>
+
+    <div class="col-lg-8 container">
+      <h1>Orders</h1>
+      <table class="table" *ngIf="orders.length>0">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Date</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <th scope="row">{{order.type}}</th>
+            <td>{{order.symbol}}</td>
+            <td>{{order.price}}</td>
+            <td>{{order.quantity}}</td>
+            <td>{{order.date}}</td>
+            <td><button class="btn btn-primary" (click)="viewDetails(order)" data-toggle="modal"
+                data-target="#detailsModal">I</button></td>
+            <td><button class="btn btn-danger" (click)="delete(order._id)">X</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
